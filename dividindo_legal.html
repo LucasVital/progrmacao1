@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Atividade final de Programação I." />
+        <meta name="Keywords" content="programação, html, css, javascript, IFRO, fim de semestre" />
+        <title>Dividinho Legal - Atividade Final - Programação I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="apple-touch-icon" href="images/favicon.png" />
+        <link rel="icon" href="images/favicon.png" />
+        <!--[if IE]>
+            <link rel="shortcut icon" href="images/favicon.png" />
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <a id="logo" href="/"><img src="./images/logo.png" title="logo" alt="logo" /></a>
+
+                <nav id="nav">
+                    <button id="btn-menu" aria-label="Abrir menu">
+                        <span class="burger"></span>
+                    </button>
+
+                    <ul id="menu" role="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dividindo_legal.html" class="current-page">Dividindo Legal</a></li>
+                        <li><a href="joguinho_legal.html">Joguinho Legal</a></li>
+                        <li><a href="#">Versão Online</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main container">
+            <div class="cols">
+                <section id="box_entao">
+                    <div class="box_entao__header">
+                        <h1>DIVIDINDO LEGAL</h1>
+                        <p>Vamos fazer de acordo com o modelo.</p>
+                        <span class="box_entao__exemplo">5 x 3 = 15, então 15 ÷ 3 = 5</span>
+                    </div>
+
+                    <span>4 x <input type="text" id="multiplicador_1" /> = 12, então 12 ÷ 4 = <input type="text" id="quociente_1" /></span>
+                    <span>3 x <input type="text" id="multiplicador_2" /> = 30, então 30 ÷ 3 = <input type="text" id="quociente_2" /></span>
+                    <span>2 x <input type="text" id="multiplicador_3" /> = 18, então 18 ÷ 2 = <input type="text" id="quociente_3" /></span>
+                    <span>5 x <input type="text" id="multiplicador_4" /> = 40, então 40 ÷ 5 = <input type="text" id="quociente_4" /></span>
+                    <span>3 x <input type="text" id="multiplicador_5" /> = 24, então 24 ÷ 3 = <input type="text" id="quociente_5" /></span>
+                    <span>4 x <input type="text" id="multiplicador_6" /> = 32, então 32 ÷ 4 = <input type="text" id="quociente_6" /></span>
+                    <span>2 x <input type="text" id="multiplicador_7" /> = 8, então 8 ÷ 2 = <input type="text" id="quociente_7" /></span>
+
+                    <div class="btn_group">
+                        <button id="btn_tentar" class="btn btn--primary">Tentar Novamente</button>
+                        <button id="corrigir" class="btn btn--secondary">Corrigir</button>
+                    </div>
+
+                    <div class="mensagens">
+                        <div id="error">errou</div>
+                        <div id="success">acerto</div>
+                    </div>
+                </section>
+
+                <section class="box_divisoes">
+                    <h1>DIVISÕES LEGAIS</h1>
+                    <p>Faça as divisões e complete com > (maior), < (menor) ou =</p>
+
+                    <div class="maior-menor">
+                        <span>35 ÷ 7 = <input type="text" id="quociente2_1" /> <input type="text" class="caixa_input" id="caixa_1" /> 10 ÷ 2 = <input type="text" id="quociente3_1" /></span>
+                        <span>48 ÷ 8 = <input type="text" id="quociente2_2" /> <input type="text" class="caixa_input" id="caixa_2" /> 42 ÷ 7 = <input type="text" id="quociente3_2" /></span>
+                        <span>81 ÷ 9 = <input type="text" id="quociente2_3" /> <input type="text" class="caixa_input" id="caixa_3" /> 40 ÷ 5 = <input type="text" id="quociente3_3" /></span>
+                        <span>25 ÷ 5 = <input type="text" id="quociente2_4" /> <input type="text" class="caixa_input" id="caixa_4" /> 20 ÷ 5 = <input type="text" id="quociente3_4" /></span>
+                        <span>21 ÷ 3 = <input type="text" id="quociente2_5" /> <input type="text" class="caixa_input" id="caixa_5" /> 72 ÷ 9 = <input type="text" id="quociente3_5" /></span>
+                        <span>18 ÷ 9 = <input type="text" id="quociente2_6" /> <input type="text" class="caixa_input" id="caixa_6" /> 12 ÷ 6 = <input type="text" id="quociente3_6" /></span>
+                        <span>36 ÷ 4 = <input type="text" id="quociente2_7" /> <input type="text" class="caixa_input" id="caixa_7" /> 24 ÷ 3 = <input type="text" id="quociente3_7" /></span>
+                        <span>45 ÷ 9 = <input type="text" id="quociente2_8" /> <input type="text" class="caixa_input" id="caixa_8" /> 36 ÷ 4 = <input type="text" id="quociente3_8" /></span>
+
+                        <div class="btn_group">
+                            <button id="btn_tentar2" class="btn btn--primary">Limpar</button>
+                            <button id="btn_comparacao" class="btn btn--secondary">Corrigir</button>
+                        </div>
+
+                        <div class="mensagens">
+                            <div id="error2">errou</div>
+                            <div id="success2">acerto</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="container footer">
+            <p>©2021 - Atividade final programação I - Professor Marcos Faino - 2021.2- 1º Período</p>
+        </footer>
+
+        <script src="js/menu.js"></script>
+        <script src="js/calculando.js"></script>
+        <script src="js/divisoes.js"></script>
+    </body>
+</html>

@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* VARIAVEIS DO PROJETO */
+:root {
+    --green-dark: #264653;
+    --green: #2a9d8f;
+    --orange: #f4a261;
+    --yellow: #e9c46a;
+    --red: #e76f51;
+    --white: #ffffff;
+    --dark: #3f3d56;
+    --gray: #686e7c;
+}
+
+.btn_group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.btn--primary {
+    border: 1px solid var(--dark);
+    background: var(--gray);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn--secondary {
+    border: 1px solid var(--green-dark);
+    background: var(--green);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn--primary:hover,
+.btn--secondary:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    background: url("../images/bg_circles.png") no-repeat #f1f5f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-menu {
+    display: none;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+#menu a {
+    color: var(--dark);
+    font-weight: 600;
+    padding: 6px 10px;
+}
+
+#menu a:hover {
+    background: var(--yellow);
+    transition: 0.3s;
+    padding: 6px 10px;
+    color: var(--white);
+    border-radius: 3px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.current-page {
+    background: var(--yellow);
+    padding: 6px 8px;
+    color: var(--white) !important;
+    border-radius: 3px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 690px) {
+    #btn-menu {
+        display: flex;
+        right: 0;
+        border: none;
+        background: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .burger {
+        border-top: 3px solid var(--red);
+        width: 20px;
+    }
+
+    .burger::after,
+    .burger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: var(--red);
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background: var(--red);
+        right: 0;
+        z-index: 999;
+        top: 70px;
+        height: 0;
+        transition: 0.6s;
+        overflow-y: hidden;
+        visibility: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #nav.active .burger {
+        border-top-color: transparent;
+    }
+
+    #nav.active .burger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #nav.active .burger::before {
+        transform: rotate(135deg);
+    }
+
+    #menu li {
+        margin: 25px 20px;
+    }
+
+    #menu a {
+        color: var(--white);
+        font-weight: 600;
+        padding: 6px 10px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+    min-height: calc(100vh - 180px);
+}
+
+.sobre span {
+    font-size: 1.625rem;
+    letter-spacing: 1px;
+}
+
+.sobre h1 {
+    font-size: 2.25rem;
+    color: var(--red);
+    letter-spacing: 1px;
+    font-weight: 900;
+    margin: 0.5rem 0;
+}
+
+.sobre p {
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.vetor {
+    padding: 40px 20px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: var(--gray);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+    height: 100px;
+}
+
+@media (min-width: 691px) {
+    .main {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .sobre {
+        padding-right: 40px;
+    }
+}
+
+/* JOGINHO LEGAL */
+
+.cols {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+#box_entao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 10px;
+    align-items: center;
+    background: var(--white);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+}
+
+#box_entao h1 {
+    font-size: 2rem;
+    color: var(--red);
+    letter-spacing: 1px;
+}
+#box_entao p {
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.box_entao__header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.box_entao__exemplo {
+    border: 4px solid var(--green);
+    border-radius: 5px;
+    font-size: 1.6rem;
+    padding: 5px 10px;
+}
+
+#box_entao span {
+    font-size: 1rem;
+}
+
+#box_entao > span input {
+    max-width: 50px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 1px solid var(--green-dark);
+    border-radius: 3px;
+    color: var(--green-dark);
+}
+
+#box_entao > span input:focus {
+    outline-color: var(--yellow);
+}
+
+.box_divisoes {
+    width: 100%;
+    background: var(--white);
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_divisoes h1 {
+    font-size: 2rem;
+    color: var(--red);
+    letter-spacing: 1px;
+}
+
+.box_divisoes p {
+    font-size: 1rem;
+    color: var(--gray);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.maior-menor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.maior-menor span {
+    font-size: 1rem;
+}
+
+.maior-menor > span input {
+    max-width: 40px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: 0;
+    border-bottom: 1px solid var(--green-dark);
+    color: var(--green-dark);
+}
+
+.caixa_input {
+    max-width: 50px;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 1px solid var(--green-dark) !important;
+    border-radius: 3px;
+    color: var(--green-dark);
+    margin: 0 20px;
+}
+
+/* JOGO ARRASTA E SOLTA */
+
+.drop {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px;
+}
+
+.drop > div {
+    border: 1px solid var(--green-dark);
+    text-align: center;
+    padding: 20px 0;
+    transition: 0.4s;
+}
+
+.certo {
+    background: var(--green);
+    color: var(--white);
+}
+
+.errado {
+    background: var(--red);
+    color: var(--white);
+}
+
+.hovered {
+    background: var(--yellow);
+    color: var(--white);
+}
+.destaque {
+    background: #90e0ff;
+    color: var(--dark);
+}
+.is-dragging {
+    cursor: move;
+    background: rgb(219, 187, 255);
+}
+
+.invisible {
+    display: none;
+}
+
+.drag {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px;
+}
+
+.drag > div {
+    border: 1px solid var(--green-dark);
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.arrastavel {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.arrastavel:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.mensagens {
+    max-width: 400px;
+    width: 100%;
+}
+
+#success {
+    background: var(--green);
+    color: var(--white);
+    border: 1px solid var(--green-dark);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+#error {
+    background: var(--red);
+    color: var(--white);
+    border: 1px solid rgb(146, 14, 14);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+#success2 {
+    background: var(--green);
+    color: var(--white);
+    border: 1px solid var(--green-dark);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    margin-top: 20px;
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+#error2 {
+    background: var(--red);
+    color: var(--white);
+    border: 1px solid rgb(146, 14, 14);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    transition: 0.4s;
+    visibility: hidden;
+}

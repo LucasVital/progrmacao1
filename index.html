@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Final - Programação I</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Atividade final de Programação I." />
+        <meta name="Keywords" content="programação, html, css, javascript, IFRO, fim de semestre" />
+        <title>Atividade Final - Programação I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="apple-touch-icon" href="images/favicon.png" />
+        <link rel="icon" href="images/favicon.png" />
+        <!--[if IE]>
+            <link rel="shortcut icon" href="images/favicon.png" />
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <a id="logo" href="/">
+                    <img src="./images/logo.png" title="logo" alt="logo" />
+                </a>
+
+                <nav id="nav">
+                    <button id="btn-menu" aria-label="Abrir menu">
+                        <span class="burger"></span>
+                    </button>
+
+                    <ul id="menu" role="menu">
+                        <li><a href="index.html" class="current-page">Home</a></li>
+                        <li><a href="dividindo_legal.html">Dividindo Legal</a></li>
+                        <li><a href="joguinho_legal.html">Joguinho Legal</a></li>
+                        <li><a href="#">Versão Online</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main container">
+            <div class="sobre">
+                <span>Olá, Eu sou</span>
+                <h1>Lucas Pedreira Vital</h1>
+                <p>Aluno do curso de Tecnologia em Análise e Desenvolvimento de Sistemas IFRO - Campus Ariquemes</p>
+            </div>
+
+            <div class="vetor">
+                <img src="images/vetor_programador.svg" alt="vetor programador" />
+            </div>
+        </main>
+
+        <footer class="container footer">
+            <p>©2021 - Atividade final programação I - Professor Marcos Faino - 2021.2- 1º Período</p>
+        </footer>
+
+        <script src="js/menu.js"></script>
+    </body>
 </html>

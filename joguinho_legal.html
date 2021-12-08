@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Atividade final de Programação I." />
+        <meta name="Keywords" content="programação, html, css, javascript, IFRO, fim de semestre" />
+        <title>Dividinho Legal - Atividade Final - Programação I</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="apple-touch-icon" href="images/favicon.png" />
+        <link rel="icon" href="images/favicon.png" />
+        <!--[if IE]>
+            <link rel="shortcut icon" href="images/favicon.png" />
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <a id="logo" href="/">
+                    <img src="./images/logo.png" title="logo" alt="logo" />
+                </a>
+
+                <nav id="nav">
+                    <button id="btn-menu" aria-label="Abrir menu">
+                        <span class="burger"></span>
+                    </button>
+
+                    <ul id="menu" role="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="dividindo_legal.html">Dividindo Legal</a></li>
+                        <li>
+                            <a href="joguinho_legal.html" class="current-page">Joguinho Legal</a>
+                        </li>
+                        <li><a href="#">Versão Online</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <main class="main container">
+            <div class="cols">
+                <section id="box_entao">
+                    <div class="box_entao__header">
+                        <h1>JOGUINHO LEGAL</h1>
+                        <p>Arraste e solte o resultado sobre a senteça correspondente.</p>
+                    </div>
+
+                    <div class="drop">
+                        <div class="drop__item">5 x 9</div>
+                        <div class="drop__item">7 x 3</div>
+                        <div class="drop__item">9 x 8</div>
+                        <div class="drop__item">9 x 3</div>
+
+                        <div class="drop__item">24 : 3</div>
+                        <div class="drop__item">45 : 5</div>
+                        <div class="drop__item">30 : 6</div>
+                        <div class="drop__item">24 : 6</div>
+
+                        <div class="drop__item">7 x 4</div>
+                        <div class="drop__item">7 x 7</div>
+                        <div class="drop__item">5 x 5</div>
+                        <div class="drop__item">3 x 4</div>
+
+                        <div class="drop__item">21 : 3</div>
+                        <div class="drop__item">12 : 2</div>
+                        <div class="drop__item">27 : 9</div>
+                        <div class="drop__item">18 : 9</div>
+                    </div>
+
+                    <div class="drag">
+                        <div draggable="true">4</div>
+                        <div draggable="true">12</div>
+                        <div draggable="true">8</div>
+                        <div draggable="true">27</div>
+
+                        <div draggable="true">49</div>
+                        <div draggable="true">45</div>
+                        <div draggable="true">7</div>
+                        <div draggable="true">5</div>
+
+                        <div draggable="true">72</div>
+                        <div draggable="true">28</div>
+                        <div draggable="true">21</div>
+                        <div draggable="true">25</div>
+
+                        <div draggable="true">2</div>
+                        <div draggable="true">6</div>
+                        <div draggable="true">3</div>
+                        <div draggable="true">9</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="container footer">
+            <p>©2021 - Atividade final programação I - Professor Marcos Faino - 2021.2- 1º Período</p>
+        </footer>
+
+        <script src="js/menu.js"></script>
+        <script src="js/joquinho.js"></script>
+    </body>
+</html>
